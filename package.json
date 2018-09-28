@@ -20,10 +20,9 @@
     "cordova-android",
     "cordova-ios",
     "mp3",
-    "lame",
-    "record"
-
+    "record",
+    "lame"
   ],
   "author": "姜彦汐 <jiangyanxi@live.com>",
-  "license": "ISC"
+  "license": ""
 }

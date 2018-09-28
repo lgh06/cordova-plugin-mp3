@@ -81,6 +81,7 @@ public class JLRecorder extends CordovaPlugin {
 
     private void destroy(CallbackContext callbackContext) {
         recorder.release();
+        file.delete();
         callbackContext.success();
     }
 }

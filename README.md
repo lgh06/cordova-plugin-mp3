@@ -1,5 +1,7 @@
 # cordova-plugin-mp3
 
+> record mp3
+
 ## 安装
 
 ``` bash
@@ -11,7 +13,8 @@ cordova plugin add https://gitee.com/undsky/cordova-plugin-mp3.git
 ### 录音
 
 ``` javascript
-var path = (('ios' == cordova.platformId ? cordova.file.tempDirectory : cordova.file.externalCacheDirectory) + (('' + new Date()).getTime() + Math.random().toFixed(7) * 10000000) + '.mp3').replace(/^file:\/\//, '');
+// 依赖 https://github.com/apache/cordova-plugin-file
+var path = (('ios' == cordova.platformId ? cordova.file.tempDirectory : cordova.file.externalCacheDirectory) + ('' + new Date().getTime() + Math.random().toFixed(7) * 10000000) + '.mp3').replace(/^file:\/\//, '');
 
 cordova.plugins.JLRecorder.start(path, function (path) {
     console.log(path);
@@ -54,3 +57,13 @@ media.play();
 + [build-lame-for-iOS](https://github.com/Superbil/build-lame-for-iOS)
 + [iOS-Lame-Audio-transcoding](https://github.com/CivelXu/iOS-Lame-Audio-transcoding)
 + ~~[iOS-Record-Transcoding-mp3-lameDemo](https://github.com/AceDong0803/iOS-Record-Transcoding-mp3-lameDemo)~~
+
+## issues
+
+### iOS
+
+#### __weak typeof(self) wSelf = self报错：- A parameter list without types is only allowed in a function definition.
+
+[https://www.jianshu.com/p/b8ce20d8b24d](https://www.jianshu.com/p/b8ce20d8b24d)
+
+Xcode－> Build Settings-> C Language Dialect修改配置，C99改为GNU99，C99不包含typeof

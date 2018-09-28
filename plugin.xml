@@ -12,6 +12,12 @@
                 <param name="ios-package" value="JLRecorder" />
             </feature>
         </config-file>
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+             <string>请求使用麦克风</string>
+         </config-file>
+        <framework src="src/ios/lame.framework" custom="true" />
+        <source-file src="src/ios/ConvertAudioFile.h" />
+        <source-file src="src/ios/ConvertAudioFile.m" />
         <source-file src="src/ios/JLRecorder.m" />
     </platform>
     <platform name="android">
