@@ -13,7 +13,7 @@
             </feature>
         </config-file>
         <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
-             <string>请求使用麦克风</string>
+             <string>请允许使用麦克风</string>
          </config-file>
         <framework src="src/ios/lame.framework" custom="true" />
         <source-file src="src/ios/ConvertAudioFile.h" />
