@@ -1,0 +1,29 @@
+{
+  "name": "com.undsky.cordova.jlrecorder",
+  "version": "0.0.1",
+  "description": "record mp3",
+  "cordova": {
+    "id": "com.undsky.cordova.jlrecorder",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/undsky/cordova-plugin-mp3.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "ecosystem:phonegap",
+    "cordova:plugin",
+    "cordova-android",
+    "cordova-ios",
+    "mp3",
+    "lame",
+    "record"
+
+  ],
+  "author": "姜彦汐 <jiangyanxi@live.com>",
+  "license": "ISC"
+}

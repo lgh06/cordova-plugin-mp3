@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.undsky.cordova.jlrecorder" version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>JLRecorder</name>
+    <js-module name="JLRecorder" src="www/JLRecorder.js">
+        <clobbers target="cordova.plugins.JLRecorder" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="JLRecorder">
+                <param name="ios-package" value="JLRecorder" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/JLRecorder.m" />
+    </platform>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="JLRecorder">
+                <param name="android-package" value="com.undsky.cordova.jlrecorder.JLRecorder" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/JLRecorder.java" target-dir="src/com/undsky/cordova/jlrecorder/JLRecorder" />
+        <framework src="src/android/JLRecorder.gradle" custom="true" type="gradleReference"/>
+        <source-file src="src/android/libs/recorder-release.aar" target-dir="app/libs" />
+        <source-file src="src/android/libs/mp3lame-release.aar" target-dir="app/libs" />
+    </platform>
+</plugin>
