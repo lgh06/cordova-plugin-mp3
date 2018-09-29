@@ -116,6 +116,7 @@
             // [self cleanCafFile];
             if ([self.audioRecorder isRecording]) {
                 [self.audioRecorder stop];
+                [[ConvertAudioFile sharedInstance] sendEndRecord];
             }
             _audioRecorder = nil;
         }
