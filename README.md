@@ -5,7 +5,7 @@
 ## 安装
 
 ``` bash
-cordova plugin add https://gitee.com/undsky/cordova-plugin-mp3.git
+cordova plugin add https://github.com/undsky/cordova-plugin-mp3.git
 ```
 
 ## 使用
